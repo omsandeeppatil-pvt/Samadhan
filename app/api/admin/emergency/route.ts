@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectToDatabase } from '@/database/lib/mongodb';
-import EmergencyLoan from '@/database/models/Emergencymodels';
+import EmergencyLoan from '@/database/models/EmergencyLoan';
 
 export async function GET(request: NextRequest) {
   try {

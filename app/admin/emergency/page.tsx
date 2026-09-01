@@ -21,7 +21,7 @@ import {
   Eye
 } from 'lucide-react';
 
-import { IEmergencyLoan } from '@/database/models/Emergencymodels';
+import EmergencyLoan from '@/database/models/EmergencyLoan';
 
 interface ApiResponse {
   success: boolean;

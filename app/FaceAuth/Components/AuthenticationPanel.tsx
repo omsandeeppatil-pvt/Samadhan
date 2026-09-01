@@ -10,7 +10,7 @@ interface AuthenticationPanelProps {
   isAuthenticating: boolean;
   isCallingUser: boolean;
   resetRegistration: () => void;
-  videoRef: React.RefObject<HTMLVideoElement>;
+  videoRef: React.RefObject<HTMLVideoElement | null>;
   onAuthenticationComplete?: () => void;
 }
 

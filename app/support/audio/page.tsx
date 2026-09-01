@@ -17,7 +17,7 @@ interface AudioQuerySolverProps {
   onResponse?: (response: VoiceResponse) => void;
 }
 
-const AudioQuerySolver: React.FC<AudioQuerySolverProps> = ({ onResponse }) => {
+const AudioQuerySolverInner: React.FC<AudioQuerySolverProps> = ({ onResponse }) => {
   const [isListening, setIsListening] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [messages, setMessages] = useState<AudioMessage[]>([]);
@@ -826,4 +826,6 @@ const AudioQuerySolver: React.FC<AudioQuerySolverProps> = ({ onResponse }) => {
   );
 };
 
-export default AudioQuerySolver;
+export default function AudioQuerySolverPage() {
+  return <AudioQuerySolverInner />;
+}

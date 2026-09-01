@@ -18,6 +18,7 @@ interface EmergencyFormData {
   medicalCertificate?: File;
   contactNumber: string;
   relationshipToPatient: string;
+  loanAmountRequired: string;
 }
 
 type StepType = 'aadhaar' | 'hospital' | 'emergency' | 'summary';
@@ -34,7 +35,8 @@ export default function EmergencyLoanPage() {
     emergencyType: '',
     emergencyDescription: '',
     contactNumber: '',
-    relationshipToPatient: ''
+    relationshipToPatient: '',
+    loanAmountRequired: ''
   });
   const [ocrResult, setOcrResult] = useState<OCRResult | null>(null);
   const [loanSummary, setLoanSummary] = useState<any>(null);
@@ -195,7 +197,8 @@ export default function EmergencyLoanPage() {
       emergencyType: '',
       emergencyDescription: '',
       contactNumber: '',
-      relationshipToPatient: ''
+      relationshipToPatient: '',
+    loanAmountRequired: ''
     });
     setOcrResult(null);
     setLoanSummary(null);
